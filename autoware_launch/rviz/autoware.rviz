@@ -81,6 +81,47 @@ Visualization Manager:
                 Expand Link Details: false
                 Expand Tree: false
                 Link Tree Style: Links in Alphabetic Order
+                base_link:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                  Value: true
+                hesai_top:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                hesai_top_base_link:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                  Value: true
+                sensor_kit_base_link:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                tamagawa/imu_link:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                  Value: true
+                ydlidar_front:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                ydlidar_front_base_link:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                  Value: true
+                ydlidar_rear:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                ydlidar_rear_base_link:
+                  Alpha: 1
+                  Show Axes: false
+                  Show Trail: false
+                  Value: true
               Mass Properties:
                 Inertia: false
                 Mass: false
@@ -137,7 +178,7 @@ Visualization Manager:
             Value: /system/emergency/hazard_status
           Value: false
           Value height offset: 0
-      Enabled: false
+      Enabled: true
       Name: System
     - Class: rviz_common/Group
       Displays:
@@ -287,7 +328,7 @@ Visualization Manager:
               Value: true
           Enabled: false
           Name: GNSS
-      Enabled: false
+      Enabled: true
       Name: Sensing
     - Class: rviz_common/Group
       Displays:
@@ -483,7 +524,7 @@ Visualization Manager:
               Value: true
           Enabled: true
           Name: EKF
-      Enabled: false
+      Enabled: true
       Name: Localization
     - Class: rviz_common/Group
       Displays:
@@ -4217,11 +4258,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 10
+      Scale: 13.784544944763184
       Target Frame: viewer
       Value: TopDownOrtho (rviz_default_plugins)
-      X: 0
-      Y: 0
+      X: 25.923311233520508
+      Y: -59.83657455444336
     Saved:
       - Class: rviz_default_plugins/ThirdPersonFollower
         Distance: 18
