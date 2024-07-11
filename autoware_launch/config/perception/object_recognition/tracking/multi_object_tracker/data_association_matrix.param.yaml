@@ -24,7 +24,7 @@
     max_area_matrix:
       # NOTE: The size of truck is 12 m length x 3 m width.
       # NOTE: The size of trailer is 20 m length x 3 m width.
-      #UNKNOWN,  CAR,      TRUCK,    BUS,      TRAILER,   MOTORBIKE, BICYCLE,  PEDESTRIAN
+      #UNKNOWN,  CAR,      TRUCK,    BUS,      TRAILER,   MOTORBIKE, BICYCLE,  PEDESTRIAN  default PEDESTRIAN x PEDESTRIAN 1.500 YH
         [100.00,   100.00,   100.00,   100.00,   100.00,    100.00,    100.00,   100.00,   #UNKNOWN
           12.10,    12.10,    36.00,    60.00,    60.00,  10000.00,  10000.00, 10000.00,   #CAR
           36.00,    12.10,    36.00,    60.00,    60.00,  10000.00,  10000.00, 10000.00,   #TRUCK
@@ -32,9 +32,9 @@
           60.00,    12.10,    36.00,    60.00,    60.00,  10000.00,  10000.00, 10000.00,   #TRAILER
            2.50, 10000.00, 10000.00, 10000.00, 10000.00,      2.50,      2.50,     1.50,   #MOTORBIKE
            2.50, 10000.00, 10000.00, 10000.00, 10000.00,      2.50,      2.50,     1.50,   #BICYCLE
-           2.00, 10000.00, 10000.00, 10000.00, 10000.00,      2.00,      2.00,     1.50]   #PEDESTRIAN
+           2.00, 10000.00, 10000.00, 10000.00, 10000.00,      2.00,      2.00,     100.50]   #PEDESTRIAN
     min_area_matrix:
-      #UNKNOWN, CAR,   TRUCK, BUS,    TRAILER,  MOTORBIKE, BICYCLE, PEDESTRIAN
+      #UNKNOWN, CAR,   TRUCK, BUS,    TRAILER,  MOTORBIKE, BICYCLE, PEDESTRIAN  default PEDESTRIAN x PEDESTRIAN 0.100 YH
       [ 0.000,  0.000, 0.000,  0.000, 0.000,    0.000,     0.000,   0.000,      #UNKNOWN
         3.600,  3.600, 6.000, 10.000, 10.000,   0.000,     0.000,   0.000,      #CAR
         6.000,  3.600, 6.000, 10.000, 10.000,   0.000,     0.000,   0.000,      #TRUCK
@@ -42,7 +42,7 @@
        10.000,  3.600, 6.000, 10.000, 10.000,   0.000,     0.000,   0.000,      #TRAILER
         0.001,  0.000, 0.000,  0.000, 0.000,    0.100,     0.100,   0.100,      #MOTORBIKE
         0.001,  0.000, 0.000,  0.000, 0.000,    0.100,     0.100,   0.100,      #BICYCLE
-        0.001,  0.000, 0.000,  0.000, 0.000,    0.100,     0.100,   0.100]      #PEDESTRIAN
+        0.001,  0.000, 0.000,  0.000, 0.000,    0.100,     0.100,   0.000]      #PEDESTRIAN
     max_rad_matrix: # If value is greater than pi, it will be ignored.
       #UNKNOWN, CAR,   TRUCK, BUS,    TRAILER MOTORBIKE, BICYCLE, PEDESTRIAN
       [3.150,   3.150, 3.150, 3.150,  3.150,  3.150,     3.150,   3.150,      #UNKNOWN
