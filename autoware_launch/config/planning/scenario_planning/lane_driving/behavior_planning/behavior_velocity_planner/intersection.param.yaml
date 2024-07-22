@@ -2,16 +2,16 @@
   ros__parameters:
     intersection:
       common:
-        attention_area_length: 200.0
+        attention_area_length: 50.0 # 200 -> 50 Adjusted for low speed vehicle
         attention_area_margin: 0.75
         attention_area_angle_threshold: 0.785
         use_intersection_area: false
         default_stopline_margin: 3.0
         stopline_overshoot_margin: 0.5
         path_interpolation_ds: 0.1
-        max_accel: -2.8
-        max_jerk: -5.0
-        delay_response_time: 0.5
+        max_accel: 0.5 # -2.8 -> 0.5 Adjusted for low speed vehicle
+        max_jerk: 0.2 # -5.0 -> 0.2 Adjusted for low speed vehicle
+        delay_response_time: 1.0 # 0.5 -> 1.0 Adjusted for low speed vehicle
         enable_pass_judge_before_default_stopline: false
 
       stuck_vehicle:
@@ -60,12 +60,12 @@
           trailer: true
           motorcycle: true
           bicycle: true
-          unknown: false
+          unknown: true
         velocity_profile:
           use_upstream: true
           minimum_upstream_velocity: 0.01
-          default_velocity: 2.778
-          minimum_default_velocity: 1.388
+          default_velocity: 1.67 # 2.778 -> 1.67 Adjusted for low speed vehicle
+          minimum_default_velocity: 1.11 # 1.388 -> 1.11 Adjusted for low speed vehicle
         fully_prioritized:
           collision_start_margin_time: 2.0
           collision_end_margin_time: 0.0
@@ -89,7 +89,7 @@
           object_time_margin_to_collision_point: 4.0
 
       occlusion:
-        enable: false
+        enable: false # false -> true Adjusted for low speed vehicle
         occlusion_attention_area_length: 70.0
         free_space_max: 43
         occupied_min: 58
@@ -97,15 +97,15 @@
         attention_lane_crop_curvature_threshold: 0.25
         attention_lane_curvature_calculation_ds: 0.6
         creep_during_peeking:
-          enable: false
+          enable: false # false -> true Adjusted for low speed vehicle
           creep_velocity: 0.8333
         peeking_offset: -0.5
         occlusion_required_clearance_distance: 55.0
         possible_object_bbox: [1.9, 2.5]
         ignore_parked_vehicle_speed_threshold: 0.8333
         occlusion_detection_hold_time: 1.5
-        temporal_stop_time_before_peeking: 0.1
-        temporal_stop_before_attention_area: false
+        temporal_stop_time_before_peeking: 0.1  # 0.1 -> 1.0 Adjusted for low speed vehicle
+        temporal_stop_before_attention_area: false  # false -> true Adjusted for low speed vehicle
         creep_velocity_without_traffic_light: 1.388
         static_occlusion_with_traffic_light_timeout: 0.5
 
