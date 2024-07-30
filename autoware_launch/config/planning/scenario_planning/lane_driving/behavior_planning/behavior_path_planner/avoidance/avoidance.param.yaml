@@ -59,15 +59,15 @@
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.5
         unknown:
-          th_moving_speed: 0.28
+          th_moving_speed: 1.0                           #default 0.28 YH
           th_moving_time: 1.0
           longitudinal_margin: 0.0
           lateral_margin:
             soft_margin: 0.4                           # [m] default 0.7 YH
-            hard_margin: 0.2                          # [m] default -0.2 YH
-            hard_margin_for_parked_vehicle: 0.2       # [m] default -0.2 YH
+            hard_margin: 0.1                          # [m] default -0.2 YH
+            hard_margin_for_parked_vehicle: 0.1       # [m] default -0.2 YH
           max_expand_ratio: 0.0
-          envelope_buffer_margin: 0.1
+          envelope_buffer_margin: 0.05    #default 0.1 YH
         bicycle:
           th_moving_speed: 0.28
           th_moving_time: 1.0
@@ -114,10 +114,10 @@
           motorcycle: true                              # [-]
           pedestrian: true                              # [-]
         # detection range
-        object_check_goal_distance: 20.0                # [m]
+        object_check_goal_distance: 5.0                # [m] |default 20.0 YH
         object_check_return_pose_distance: 20.0         # [m]
         # lost object compensation
-        max_compensation_time: 2.0
+        max_compensation_time: 5.0  #default 2.0 YH
 
         # detection area generation parameters
         detection_area:
@@ -141,8 +141,8 @@
           enable: true                                  # [-]
           closest_distance_to_wait_and_see: 10.0        # [m]
           condition:
-            th_stopped_time: 3.0                        # [s]
-            th_moving_distance: 1.0                     # [m]
+            th_stopped_time: 1.0                        # [s] |default 3.0 YH
+            th_moving_distance: 2.0                     # [m] |default 1.0 YH
           ignore_area:
             traffic_light:
               front_distance: 100.0                     # [m]
@@ -199,25 +199,25 @@
       avoidance:
         # avoidance lateral parameters
         lateral:
-          th_avoid_execution: 0.09                      # [m] FOR DEVELOPER
-          th_small_shift_length: 0.101                  # [m] FOR DEVELOPER
+          th_avoid_execution: 0.09                      # [m] FOR DEVELOPER |default 0.09 YH
+          th_small_shift_length: 0.101                  # [m] FOR DEVELOPER |default 0.101 YH
           soft_drivable_bound_margin: 0.1                # [m] |default 0.3 YH
           hard_drivable_bound_margin: 0.1                # [m] |default 0.3 YH
           max_right_shift_length: 5.0                   # [m] FOR DEVELOPER
           max_left_shift_length: 5.0                    # [m] FOR DEVELOPER
-          max_deviation_from_lane: 1.00                  # [m] |default 0.2 YH seems not to have an effect when there is only one lane
+          max_deviation_from_lane: 0.2                  # [m] |default 0.2 YH seems not to have an effect when there is only one lane
           # approve the next shift line after reaching this percentage of the current shift line length.
           # this parameter is added to allow waiting for the return of shift approval until the occlusion behind the avoid target is clear.
           # this feature can be disabled by setting this parameter to 0.0.
-          ratio_for_return_shift_approval: 0.0          # [-] default 0.5 YH
+          ratio_for_return_shift_approval: 0.01          # [-] default 0.5 YH
         # avoidance distance parameters
         longitudinal:
-          min_prepare_time: 1.0                         # [s] |default 1.0 YH
-          max_prepare_time: 2.0                         # [s] |default 2.0 YH
-          min_prepare_distance: 1.0                     # [m] |default 1.0 YH
-          min_slow_down_speed: 1.38                     # [m/s]
+          min_prepare_time: 0.0                         # [s] |default 1.0 YH
+          max_prepare_time: 0.2                         # [s] |default 2.0 YH
+          min_prepare_distance: 0.0                     # [m] |default 1.0 YH
+          min_slow_down_speed: 0.7                     # [m/s] |default 1.38 YH
           buf_slow_down_speed: 0.56                     # [m/s] FOR DEVELOPER
-          nominal_avoidance_speed: 8.33                 # [m/s] FOR DEVELOPER
+          nominal_avoidance_speed: 1.00                 # [m/s] FOR DEVELOPER |default 8.33 YH
           consider_front_overhang: true                 # [-]
           consider_rear_overhang: true                  # [-]
         # return dead line
@@ -231,7 +231,7 @@
 
       # For cancel maneuver
       cancel:
-        enable: true                                    # [-]
+        enable: true                                    # [-] |deafult true YH
 
       # For yield maneuver
       yield:
