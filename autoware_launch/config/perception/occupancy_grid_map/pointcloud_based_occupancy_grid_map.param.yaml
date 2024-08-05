@@ -10,11 +10,11 @@
 
     # downsample input pointcloud
     downsample_input_pointcloud: true
-    downsample_voxel_size: 0.125 # [m]
+    downsample_voxel_size: 0.05 # [m]
 
     enable_single_frame_mode: false
     # use sensor pointcloud to filter obstacle pointcloud
-    filter_obstacle_pointcloud_by_raw_pointcloud: false
+    filter_obstacle_pointcloud_by_raw_pointcloud: true
 
     # grid map coordinate
     map_frame: "map"
@@ -27,8 +27,8 @@
 
     grid_map_type: "OccupancyGridMapFixedBlindSpot"
     OccupancyGridMapFixedBlindSpot:
-      distance_margin: 1.0
+      distance_margin: 0.5
     OccupancyGridMapProjectiveBlindSpot:
       projection_dz_threshold: 0.01 # [m] for avoiding null division
-      obstacle_separation_threshold: 1.0 # [m] fill the interval between obstacles with unknown for this length
+      obstacle_separation_threshold: 0.3 # [m] fill the interval between obstacles with unknown for this length
       pub_debug_grid: false
