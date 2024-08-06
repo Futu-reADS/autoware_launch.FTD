@@ -20,7 +20,7 @@
     timer_interval_ms: 100
 
     # distance threshold for dynamic map update
-    map_update_distance_threshold: 8.0
+    map_update_distance_threshold: 10.0
 
     # radius map for dynamic map loading
     map_loader_radius: 100.0

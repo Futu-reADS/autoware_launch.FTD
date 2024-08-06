@@ -1,12 +1,12 @@
 /**:
   ros__parameters:
     map_length: 150.0     # [m]
-    map_resolution: 0.2 # [m]
+    map_resolution: 0.5 # [m]
 
     height_filter:
       use_height_filter: true
       min_height: -1.0
-      max_height: 1.5
+      max_height: 2.0
 
     # downsample input pointcloud
     downsample_input_pointcloud: true
