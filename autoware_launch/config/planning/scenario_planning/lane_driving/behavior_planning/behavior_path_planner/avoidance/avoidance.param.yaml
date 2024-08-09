@@ -63,9 +63,9 @@
           th_moving_time: 1.0
           longitudinal_margin: 0.0
           lateral_margin:
-            soft_margin: 0.3                           # [m] default 0.7 YH
-            hard_margin: 0.1                          # [m] default -0.2 YH
-            hard_margin_for_parked_vehicle: 0.1       # [m] default -0.2 YH
+            soft_margin: 0.25                           # [m] default 0.7 YH
+            hard_margin: 0.2                          # [m] default -0.2 YH
+            hard_margin_for_parked_vehicle: 0.2       # [m] default -0.2 YH
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.05    #default 0.1 YH
         bicycle:
@@ -199,7 +199,7 @@
       avoidance:
         # avoidance lateral parameters
         lateral:
-          th_avoid_execution: 0.043                     # [m] FOR DEVELOPER |default 0.09 YH
+          th_avoid_execution: 0.041                     # [m] FOR DEVELOPER |default 0.09 YH
           th_small_shift_length: 0.047                  # [m] FOR DEVELOPER |default 0.101 YH
           soft_drivable_bound_margin: 0.0                # [m] |default 0.3 YH
           hard_drivable_bound_margin: 0.0                # [m] |default 0.3 YH
