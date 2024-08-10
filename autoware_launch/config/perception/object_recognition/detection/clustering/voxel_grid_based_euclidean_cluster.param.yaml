@@ -1,17 +1,17 @@
 /**:
   ros__parameters:
-    tolerance: 0.3
-    voxel_leaf_size: 0.05
+    tolerance: 0.5
+    voxel_leaf_size: 0.1
     min_points_number_per_voxel: 1
-    min_cluster_size: 5
+    min_cluster_size: 10
     max_cluster_size: 3000
     use_height: false
     input_frame: "base_link"
 
     # low height crop box filter param
-    max_x: 200.0
-    min_x: -200.0
-    max_y: 200.0
-    min_y: -200.0
-    max_z: 2.0
-    min_z: -10.0
+    max_x: 100.0
+    min_x: -100.0
+    max_y: 100.0
+    min_y: -100.0
+    max_z: 1.0
+    min_z: -1.3
