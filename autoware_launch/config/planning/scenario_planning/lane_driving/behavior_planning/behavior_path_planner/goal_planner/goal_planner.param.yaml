@@ -147,7 +147,7 @@
             check_bicycle: true
             check_motorcycle: true
             check_pedestrian: true
-            check_unknown: false
+            check_unknown: true #default false YH
           # ObjectLaneConfiguration
           object_lane_configuration:
             check_current_lane: true
