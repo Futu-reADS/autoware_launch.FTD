@@ -1,6 +1,6 @@
 /**:
   ros__parameters:
-    tracker_ignore_label.UNKNOWN : true
+    tracker_ignore_label.UNKNOWN : false #default true YH
     tracker_ignore_label.CAR : false
     tracker_ignore_label.TRUCK : false
     tracker_ignore_label.BUS : false
