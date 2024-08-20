@@ -62,9 +62,9 @@
     avoidance:
       enable_rtc: false
       enable_simultaneous_execution_as_approved_module: true
-      enable_simultaneous_execution_as_candidate_module: false
+      enable_simultaneous_execution_as_candidate_module: true
       keep_last: false
-      priority: 4
+      priority: 0
       max_module_size: 1
 
     avoidance_by_lane_change:
