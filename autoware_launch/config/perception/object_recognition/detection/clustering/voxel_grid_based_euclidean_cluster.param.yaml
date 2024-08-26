@@ -4,8 +4,8 @@
     voxel_leaf_size: 0.03
     min_points_number_per_voxel: 1
     min_cluster_size: 10
-    max_cluster_size: 3000
-    use_height: true
+    max_cluster_size: 3000 #default 3000 AS
+    use_height: false
     input_frame: "base_link"
 
     # low height crop box filter param
