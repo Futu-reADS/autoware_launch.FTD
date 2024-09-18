@@ -7,8 +7,8 @@
 
     common_crop_box_filter:
       parameters:
-        min_x: -10.0
-        max_x: 10.0
+        min_x: -5.0
+        max_x: 15.0
         min_y: -6.0
         max_y: 6.0
         margin_max_z: 0.0  # to extend the crop box max_z from vehicle_height
@@ -23,7 +23,7 @@
         split_points_distance_tolerance: 0.1
         use_virtual_ground_point: true
         split_height_distance: 0.05
-        non_ground_height_threshold: 0.1
+        non_ground_height_threshold: 0.05
         grid_size_m: 0.1
         grid_mode_switch_radius: 20.0
         gnd_grid_buffer_size: 1500

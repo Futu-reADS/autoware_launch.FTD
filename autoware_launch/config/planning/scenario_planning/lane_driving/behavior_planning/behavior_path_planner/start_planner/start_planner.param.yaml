@@ -149,8 +149,8 @@
           # hysteresis factor to expand/shrink polygon
           hysteresis_factor_expand_rate: 1.0
           # temporary
-          backward_path_length: 30.0
-          forward_path_length: 100.0
+          backward_path_length: 5.0
+          forward_path_length: 50.0
 
       surround_moving_obstacle_check:
           search_radius: 10.0
