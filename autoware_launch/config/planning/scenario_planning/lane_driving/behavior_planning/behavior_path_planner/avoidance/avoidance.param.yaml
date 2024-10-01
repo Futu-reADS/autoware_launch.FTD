@@ -199,9 +199,9 @@
       avoidance:
         # avoidance lateral parameters
         lateral:
-          th_avoid_execution: 0.041                     # [m] FOR DEVELOPER |default 0.09 YH
+          th_avoid_execution: 0.0                     # [m] FOR DEVELOPER |default 0.09 YH
           th_small_shift_length: 0.047                  # [m] FOR DEVELOPER |default 0.101 YH
-          soft_drivable_bound_margin: 0.0                # [m] |default 0.3 YH
+          soft_drivable_bound_margin: 0.1                # [m] |default 0.3 YH
           hard_drivable_bound_margin: 0.0                # [m] |default 0.3 YH
           max_right_shift_length: 5.0                   # [m] FOR DEVELOPER
           max_left_shift_length: 5.0                    # [m] FOR DEVELOPER
@@ -215,7 +215,7 @@
           min_prepare_time: 0.0                         # [s] |default 1.0 YH
           max_prepare_time: 0.2                         # [s] |default 2.0 YH
           min_prepare_distance: 0.0                     # [m] |default 1.0 YH
-          min_slow_down_speed: 0.7                     # [m/s] |default 1.38 YH
+          min_slow_down_speed: 0.28                     # [m/s] |default 1.38 YH
           buf_slow_down_speed: 0.56                     # [m/s] FOR DEVELOPER
           nominal_avoidance_speed: 1.00                 # [m/s] FOR DEVELOPER |default 8.33 YH
           consider_front_overhang: true                 # [-]
@@ -240,7 +240,7 @@
 
       # For stop maneuver
       stop:
-        max_distance: 20.0                              # [m]
+        max_distance: 20.0                              # [m] |default 20.0 YH
         stop_buffer: 1.0                                # [m] FOR DEVELOPER
 
       policy:
@@ -271,8 +271,8 @@
         # lateral constraints
         lateral:
           velocity: [1.0, 1.38, 11.1]                   # [m/s]
-          max_accel_values: [0.5, 0.5, 0.5]             # [m/ss]
-          min_jerk_values: [0.2, 0.2, 0.2]              # [m/sss]
+          max_accel_values: [10.5, 10.5, 10.5]             # [m/ss] |default all 0.5 YH
+          min_jerk_values: [0.2, 0.2, 0.2]              # [m/sss] |default all 0.2 YH
           max_jerk_values: [10.0, 10.0, 10.0]              # [m/sss] |default all 1.0 YH
 
         # longitudinal constraints
