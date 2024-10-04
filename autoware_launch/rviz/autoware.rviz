@@ -4,10 +4,8 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Map1
         - /Map1/PointCloudMap1
         - /Sensing1/LiDAR1/ConcatenatePointCloud1/Autocompute Value Bounds1
-        - /Perception1
         - /Perception1/ObjectRecognition1
         - /Perception1/ObjectRecognition1/Prediction1
         - /Perception1/ObjectRecognition1/Prediction1/PredictedObjects1
@@ -574,7 +572,7 @@ Visualization Manager:
               Use Fixed Frame: true
               Use rainbow: true
               Value: true
-          Enabled: true
+          Enabled: false
           Name: Segmentation
         - Class: rviz_common/Group
           Displays:
@@ -837,7 +835,11 @@ Visualization Manager:
               Enabled: true
               Name: RouteArea
               Namespaces:
-                {}
+                goal_lanelets: true
+                lane_start_bound: true
+                left_lane_bound: true
+                right_lane_bound: true
+                route_lanelets: true
               Topic:
                 Depth: 5
                 Durability Policy: Transient Local
@@ -885,10 +887,10 @@ Visualization Manager:
                 Alpha: 1
                 Color: 230; 230; 50
                 Offset from BaseLink: 0
-                Rear Overhang: 1.0299999713897705
+                Rear Overhang: 0.25
                 Value: false
-                Vehicle Length: 4.769999980926514
-                Vehicle Width: 1.8300000429153442
+                Vehicle Length: 1.6299999952316284
+                Vehicle Width: 0.9549999833106995
               View Path:
                 Alpha: 0.9990000128746033
                 Color: 0; 0; 0
@@ -939,10 +941,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 1.0299999713897705
+                        Rear Overhang: 0.25
                         Value: false
-                        Vehicle Length: 4.769999980926514
-                        Vehicle Width: 1.8300000429153442
+                        Vehicle Length: 1.6299999952316284
+                        Vehicle Width: 0.9549999833106995
                       View Path:
                         Alpha: 0.4000000059604645
                         Color: 0; 0; 0
@@ -1289,10 +1291,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 1.0299999713897705
+                        Rear Overhang: 0.25
                         Value: false
-                        Vehicle Length: 4.769999980926514
-                        Vehicle Width: 1.8300000429153442
+                        Vehicle Length: 1.6299999952316284
+                        Vehicle Width: 0.9549999833106995
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -1589,10 +1591,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 1.0299999713897705
+                        Rear Overhang: 0.25
                         Value: false
-                        Vehicle Length: 4.769999980926514
-                        Vehicle Width: 1.8300000429153442
+                        Vehicle Length: 1.6299999952316284
+                        Vehicle Width: 0.9549999833106995
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -1639,10 +1641,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 1.0299999713897705
+                        Rear Overhang: 0.25
                         Value: false
-                        Vehicle Length: 4.769999980926514
-                        Vehicle Width: 1.8300000429153442
+                        Vehicle Length: 1.6299999952316284
+                        Vehicle Width: 0.9549999833106995
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -1689,10 +1691,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 1.0299999713897705
+                        Rear Overhang: 0.25
                         Value: false
-                        Vehicle Length: 4.769999980926514
-                        Vehicle Width: 1.8300000429153442
+                        Vehicle Length: 1.6299999952316284
+                        Vehicle Width: 0.9549999833106995
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -2493,7 +2495,8 @@ Visualization Manager:
                           Enabled: true
                           Name: VirtualWall (ObstacleAvoidance)
                           Namespaces:
-                            {}
+                            stop_factor_text: true
+                            stop_virtual_wall: true
                           Topic:
                             Depth: 5
                             Durability Policy: Volatile
@@ -2775,10 +2778,10 @@ Visualization Manager:
             Alpha: 1
             Color: 230; 230; 50
             Offset from BaseLink: 0
-            Rear Overhang: 1.0299999713897705
+            Rear Overhang: 0.25
             Value: false
-            Vehicle Length: 4.769999980926514
-            Vehicle Width: 1.8300000429153442
+            Vehicle Length: 1.6299999952316284
+            Vehicle Width: 0.9549999833106995
           View Path:
             Alpha: 1
             Color: 255; 255; 255
