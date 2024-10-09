@@ -18,16 +18,16 @@
         check_motorcycle: true
         check_pedestrian: true
         check_unknown: true
-      th_distance_to_middle_of_the_road: 0.5
+      th_distance_to_middle_of_the_road: 0.0 #default 0.5 YH
       center_line_path_interval: 1.0
       # shift pull out
       enable_shift_pull_out: true
       check_shift_path_lane_departure: true
-      allow_check_shift_path_lane_departure_override: false
+      allow_check_shift_path_lane_departure_override: true #default false
       shift_collision_check_distance_from_end: -10.0
       minimum_shift_pull_out_distance: 0.0
       deceleration_interval: 15.0
-      maximum_longitudinal_deviation: 1.0 # Note, should be the same or less than planning validator's "longitudinal_distance_deviation"
+      maximum_longitudinal_deviation: 3.0 # Note, should be the same or less than planning validator's "longitudinal_distance_deviation" | default 1.0 YH
       lateral_jerk: 0.5
       lateral_acceleration_sampling_num: 3
       minimum_lateral_acc: 0.15
@@ -41,14 +41,14 @@
       arc_path_interval: 1.0
       lane_departure_margin: 0.2
       backward_velocity: -1.0
-      pull_out_max_steer_angle: 0.26  # 15deg
+      pull_out_max_steer_angle: 0.26  # 15deg #default 0.26 YH
       # search start pose backward
       enable_back: true
       search_priority: "efficient_path"  # "efficient_path" or "short_back_distance"
-      max_back_distance: 20.0
-      backward_search_resolution: 2.0
+      max_back_distance: 5.0 #default 20.0 YH
+      backward_search_resolution: 0.4 #default 2.0 YH
       backward_path_update_duration: 3.0
-      ignore_distance_from_lane_end: 15.0
+      ignore_distance_from_lane_end: 0.0 #default 15.0 YH
       # turns signal
       prepare_time_before_start: 0.0
       th_turn_signal_on_lateral_offset: 1.0

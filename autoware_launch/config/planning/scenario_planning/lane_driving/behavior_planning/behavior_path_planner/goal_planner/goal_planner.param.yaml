@@ -16,9 +16,9 @@
         parking_policy: "right_side" # "left_side" or "right_side" |default left_side YH
         forward_goal_search_length: 40.0
         backward_goal_search_length: 20.0
-        goal_search_interval: 1.0 #default 2.0 YH
+        goal_search_interval: 0.5 #default 2.0 YH
         longitudinal_margin: 1.0 #default 3.0 YH
-        max_lateral_offset: 1.0
+        max_lateral_offset: 3.0 #default 1.0 YH
         lateral_offset_interval: 0.25 #default 0.5 YH
         ignore_distance_from_lane_start: 0.0
         margin_from_boundary: 0.75
