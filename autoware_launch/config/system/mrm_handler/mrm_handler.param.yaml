@@ -7,7 +7,7 @@
     timeout_call_mrm_behavior: 0.01
     timeout_cancel_mrm_behavior: 0.01
     use_emergency_holding: false
-    timeout_emergency_recovery: 5.0
+    timeout_emergency_recovery: 20.0 #default 5.0 YH
     use_parking_after_stopped: false
     use_pull_over: false
     use_comfortable_stop: false
