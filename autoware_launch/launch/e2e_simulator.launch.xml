@@ -22,7 +22,7 @@
   <arg name="control" default="true" description="launch control"/>
   <!-- Map -->
   <arg name="lanelet2_map_file" default="facility_lanelet2_map_without_bollards_right_side_driving.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="facility_pointcloud_map.pcd" description="pointcloud map file name"/>
+  <arg name="pointcloud_map_file" default="facility_pointcloud_map_subsampled.pcd" description="pointcloud map file name"/>
   <!-- Perception -->
   <arg name="traffic_light_namespace" default="traffic_light" description="traffic light recognition namespace1"/>
   <!-- Control -->
