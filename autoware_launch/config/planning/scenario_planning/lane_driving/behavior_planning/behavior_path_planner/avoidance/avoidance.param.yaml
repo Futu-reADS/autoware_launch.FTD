@@ -168,18 +168,18 @@
           pedestrian: true                              # [-]
         # safety check configuration
         enable: true                                    # [-]
-        check_current_lane: false                       # [-]
+        check_current_lane: true                       # [-] |default false YH
         check_shift_side_lane: true                     # [-]
         check_other_side_lane: false                    # [-]
         check_unavoidable_object: false                 # [-]
         check_other_object: true                        # [-]
         # collision check parameters
         check_all_predicted_path: false                 # [-]
-        safety_check_backward_distance: 100.0           # [m]
+        safety_check_backward_distance: 5.0           # [m] |default 100.0 YH
         hysteresis_factor_expand_rate: 1.5              # [-]
         hysteresis_factor_safe_count: 3                 # [-]
         # predicted path parameters
-        min_velocity: 1.38                              # [m/s]
+        min_velocity: 0.25                              # [m/s] |default 1.38 YH
         max_velocity: 50.0                              # [m/s]
         time_resolution: 0.5                            # [s]
         time_horizon_for_front_object: 3.0              # [s]
@@ -236,7 +236,7 @@
       # For yield maneuver
       yield:
         enable: true                                    # [-]
-        enable_during_shifting: false                   # [-]
+        enable_during_shifting: true                   # [-] |default false YH
 
       # For stop maneuver
       stop:
