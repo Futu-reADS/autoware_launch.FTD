@@ -2,9 +2,9 @@
 <launch>
   <!-- Essential parameters -->
   <arg name="use_sim_time" default="true" description="use simulation time"/>
-  <arg name="map_path" description="point cloud and lanelet2 map directory path"/>
-  <arg name="vehicle_model" default="sample_vehicle" description="vehicle model name"/>
-  <arg name="sensor_model" default="sample_sensor_kit" description="sensor model name"/>
+  <arg name="map_path" default="$(env HOME)/autoware.FTD/src/future_packages/ft_maps/map" description="point cloud and lanelet2 map directory path"/>
+  <arg name="vehicle_model" default="ftd_vehicle" description="vehicle model name"/>
+  <arg name="sensor_model" default="ftd_sensor_kit" description="sensor model name"/>
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
   <arg name="simulator_type" default="awsim" description="select the simulator type ('awsim' or 'carla')"/>
 
@@ -22,8 +22,8 @@
   <arg name="planning" default="true" description="launch planning"/>
   <arg name="control" default="true" description="launch control"/>
   <!-- Map -->
-  <arg name="lanelet2_map_file" default="lanelet2_map.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="pointcloud_map.pcd" description="pointcloud map file name"/>
+  <arg name="lanelet2_map_file" default="facility_lanelet2_map_v2.0.osm" description="lanelet2 map file name"/>
+  <arg name="pointcloud_map_file" default="facility_pointcloud_map_subsampled.pcd" description="pointcloud map file name"/>
   <!-- Perception -->
   <arg name="traffic_light_namespace" default="[traffic_light]" description="traffic light recognition namespace"/>
   <!-- Control -->

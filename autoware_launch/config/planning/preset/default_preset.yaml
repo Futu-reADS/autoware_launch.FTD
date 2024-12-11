@@ -14,10 +14,10 @@ launch:
       default: "false" # Warning, experimental module, use only in simulations
   - arg:
       name: launch_lane_change_right_module
-      default: "true"
+      default: "false" #default true YH
   - arg:
       name: launch_lane_change_left_module
-      default: "true"
+      default: "false" #default true YH
   - arg:
       name: launch_external_request_lane_change_right_module
       default: "false"
@@ -32,7 +32,7 @@ launch:
       default: "true"
   - arg:
       name: launch_side_shift_module
-      default: "true"
+      default: "false" #default true YH
 
   # behavior velocity modules
   - arg:
@@ -43,7 +43,7 @@ launch:
       default: "true"
   - arg:
       name: launch_traffic_light_module
-      default: "true"
+      default: "false"
   - arg:
       name: launch_intersection_module
       default: "true"
@@ -52,7 +52,7 @@ launch:
       default: "true"
   - arg:
       name: launch_blind_spot_module
-      default: "true"
+      default: "false"
   - arg:
       name: launch_detection_area_module
       default: "true"

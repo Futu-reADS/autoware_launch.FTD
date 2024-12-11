@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <!-- Essential parameters -->
-  <arg name="map_path" description="point cloud and lanelet2 map directory path"/>
-  <arg name="vehicle_model" default="sample_vehicle" description="vehicle model name"/>
-  <arg name="sensor_model" default="sample_sensor_kit" description="sensor model name"/>
+  <arg name="map_path" default="$(env HOME)/autoware.FTD/src/future_packages/ft_maps/map" description="point cloud and lanelet2 map directory path"/>
+  <arg name="vehicle_model" default="ftd_vehicle" description="vehicle model name"/>
+  <arg name="sensor_model" default="ftd_sensor_kit" description="sensor model name"/>
   <arg name="pointcloud_container_name" default="pointcloud_container"/>
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
 
@@ -22,6 +22,9 @@
   <arg name="launch_planning" default="true" description="launch planning"/>
   <arg name="launch_control" default="true" description="launch control"/>
   <arg name="launch_api" default="true" description="launch api"/>
+
+  <arg name="master_planner" default="true" description="launch MP"/>
+
   <!-- Global parameters -->
   <arg name="use_sim_time" default="false" description="use_sim_time"/>
   <!-- Vehicle -->
@@ -30,11 +33,13 @@
   <!-- Control -->
   <arg name="check_external_emergency_heartbeat" default="false"/>
   <!-- Map -->
-  <arg name="lanelet2_map_file" default="lanelet2_map.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="pointcloud_map.pcd" description="pointcloud map file name"/>
+  
+  <!-- <arg name="lanelet2_map_file" default="okinawa_full_single_loop_fitted_3.0.osm" description="lanelet2 map file name"/> -->
+  <arg name="lanelet2_map_file" default="okinawa_simple_loop_3m_lanes.osm" description="lanelet2 map file name"/>
+  <arg name="pointcloud_map_file" default="okinawa_outside_clean.pcd" description="pointcloud map file name"/>
   <!-- System -->
   <arg name="system_run_mode" default="online" description="run mode in system"/>
-  <arg name="launch_system_monitor" default="true" description="launch system monitor"/>
+  <arg name="launch_system_monitor" default="false" description="launch system monitor"/>
   <arg name="launch_dummy_diag_publisher" default="false" description="launch dummy diag publisher"/>
   <arg name="diagnostic_graph_aggregator_graph_path" default="$(find-pkg-share autoware_launch)/config/system/diagnostic_graph_aggregator/autoware-main.yaml" description="diagnostic graph config"/>
   <!-- Tools -->
@@ -43,7 +48,7 @@
   <arg name="rviz_respawn" default="true"/>
   <!-- Perception -->
   <arg name="perception_mode" default="lidar" description="select perception mode. camera_lidar_radar_fusion, camera_lidar_fusion, lidar_radar_fusion, lidar, radar"/>
-  <arg name="traffic_light_recognition/enable_fine_detection" default="true" description="enable traffic light fine detection"/>
+  <arg name="traffic_light_recognition/enable_fine_detection" default="false" description="enable traffic light fine detection"/>
   <!-- Auto mode setting-->
   <arg name="enable_all_modules_auto_mode" default="false" description="enable all module's auto mode"/>
   <arg name="is_simulation" default="false" description="Autoware's behavior will change depending on whether this is a simulation or not."/>
@@ -108,6 +113,11 @@
       <arg name="enable_all_modules_auto_mode" value="$(var enable_all_modules_auto_mode)"/>
       <arg name="is_simulation" value="$(var is_simulation)"/>
     </include>
+  </group>
+
+  <!-- Master Planner -->
+  <group if="$(var master_planner)">
+    <include file="$(find-pkg-share master_planner)/launch/master_planner.launch.xml"/>
   </group>
 
   <!-- Control -->

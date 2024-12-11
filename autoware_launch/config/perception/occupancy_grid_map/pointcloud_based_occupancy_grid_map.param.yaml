@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
-    map_length: 150.0     # [m]
-    map_resolution: 0.5 # [m]
+    map_length: 20.0     # [m]
+    map_resolution: 0.1 # [m]
 
     height_filter:
       use_height_filter: true
@@ -10,7 +10,7 @@
 
     # downsample input pointcloud
     downsample_input_pointcloud: true
-    downsample_voxel_size: 0.125 # [m]
+    downsample_voxel_size: 0.05 # [m]
 
     enable_single_frame_mode: false
     # use sensor pointcloud to filter obstacle pointcloud
@@ -20,10 +20,12 @@
     map_frame: "map"
     base_link_frame: "base_link"
     # center of the grid map
-    gridmap_origin_frame: "base_link"
+    # gridmap_origin_frame: "base_link"
+    gridmap_origin_frame: "sensor_kit_base_link"
+
     # ray-tracing center: main sensor frame is preferable like: "velodyne_top"
     # base_link should not be used with "OccupancyGridMapProjectiveBlindSpot"
-    scan_origin_frame: "base_link"
+    scan_origin_frame: "sensor_kit_base_link"
 
     grid_map_type: "OccupancyGridMapFixedBlindSpot"
     OccupancyGridMapFixedBlindSpot:

@@ -4,12 +4,12 @@
 
     planning_hz: 10.0
     backward_path_length: 5.0
-    forward_path_length: 300.0
+    forward_path_length: 30.0 #default 300 YH
     backward_length_buffer_for_end_of_pull_over: 5.0
     backward_length_buffer_for_end_of_pull_out: 5.0
     minimum_pull_over_length: 16.0
 
-    refine_goal_search_radius_range: 7.5
+    refine_goal_search_radius_range: 1.5 #default was 7.5 YH
 
     # parameters for turn signal decider
     turn_signal_intersection_search_distance: 30.0
@@ -22,5 +22,5 @@
 
     enable_akima_spline_first: false
     enable_cog_on_centerline: false
-    input_path_interval: 2.0
-    output_path_interval: 2.0
+    input_path_interval: 1.0
+    output_path_interval: 1.0
