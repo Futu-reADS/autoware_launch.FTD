@@ -3,7 +3,8 @@
     common:
       # output
       output_delta_arc_length: 0.5     #  delta arc length for output trajectory [m]
-      output_backward_traj_length: 5.0  # backward length for backward trajectory from base_link [m]
+      output_backward_traj_length: 2.5  # backward length for backward trajectory from base_link [m] #SJ default 5.0 #IMPORTANT change - The higher the value, the larger the arc length of the smoothed out curve. 
+                                      # Higher values mean any maneuvers will have a much smoother and shallower curve. Lower values mean the curve arc length is smaller and can have a smaller radius. 
     # elastic band
     elastic_band:
       option:
