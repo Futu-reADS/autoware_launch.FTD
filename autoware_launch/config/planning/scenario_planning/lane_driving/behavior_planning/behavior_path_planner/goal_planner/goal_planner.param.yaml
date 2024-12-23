@@ -48,7 +48,7 @@
       pull_over:
         minimum_request_length: 0.0
         pull_over_velocity: 3.0
-        pull_over_minimum_velocity: 1.38
+        pull_over_minimum_velocity: 0.25 #SJ FTPP default 1.38
         decide_path_distance: 10.0
         maximum_deceleration: 1.0
         maximum_jerk: 1.0
@@ -71,14 +71,14 @@
           forward:
             enable_arc_forward_parking: true
             after_forward_parking_straight_distance: 2.0
-            forward_parking_velocity: 1.38
+            forward_parking_velocity: 0.25 #SJ FTPP default 1.38
             forward_parking_lane_departure_margin: 0.0
             forward_parking_path_interval: 1.0
             forward_parking_max_steer_angle: 0.35  # 20deg
           backward:
             enable_arc_backward_parking: true
             after_backward_parking_straight_distance: 2.0
-            backward_parking_velocity: -1.38
+            backward_parking_velocity: -0.25 #SJ FTPP default -1.38
             backward_parking_lane_departure_margin: 0.0
             backward_parking_path_interval: 1.0
             backward_parking_max_steer_angle: 0.35  # 20deg
@@ -87,7 +87,7 @@
         freespace_parking:
           enable_freespace_parking: true
           freespace_parking_algorithm: "astar"  # options: astar, rrtstar
-          velocity: 1.0
+          velocity: 0.25 #SJ FTPP default 1.0
           vehicle_shape_margin: 1.0
           time_limit: 3000.0
           minimum_turning_radius: 5.0
