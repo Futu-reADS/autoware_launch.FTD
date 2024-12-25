@@ -143,5 +143,7 @@
       if="$(var rviz)"
       respawn="$(var rviz_respawn)"
     />
+
+    <include file="$(find-pkg-share control_performance_analysis)/launch/control_performance_analysis.launch.xml"/>
   </group>
 </launch>
