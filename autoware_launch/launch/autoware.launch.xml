@@ -145,5 +145,6 @@
     />
 
     <include file="$(find-pkg-share control_performance_analysis)/launch/control_performance_analysis.launch.xml"/>
+    <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_viewer.launch.xml"/>
   </group>
 </launch>
