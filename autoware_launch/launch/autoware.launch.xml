@@ -48,6 +48,8 @@
   <arg name="rviz" default="true" description="launch rviz"/>
   <arg name="rviz_config" default="$(find-pkg-share autoware_launch)/rviz/autoware.rviz" description="rviz config"/>
   <arg name="rviz_respawn" default="true"/>
+  <arg name="launch_control_performance_analysis" default="false" description="launch control_performance_analysis"/>
+  <arg name="launch_parcelpal_stop_viewer" default="false" description="launch parcelpal_stop_viewer"/>
   <!-- Perception -->
   <arg name="perception_mode" default="lidar" description="select perception mode. camera_lidar_radar_fusion, camera_lidar_fusion, lidar_radar_fusion, lidar, radar"/>
   <arg name="traffic_light_recognition/enable_fine_detection" default="false" description="enable traffic light fine detection"/>
@@ -143,8 +145,13 @@
       if="$(var rviz)"
       respawn="$(var rviz_respawn)"
     />
+  </group>
 
+  <group if="$(var launch_control_performance_analysis)">
     <include file="$(find-pkg-share control_performance_analysis)/launch/control_performance_analysis.launch.xml"/>
+  </group>
+  <group if="$(var launch_parcelpal_stop_viewer)">
     <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_viewer.launch.xml"/>
   </group>
+
 </launch>
