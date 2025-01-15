@@ -271,16 +271,16 @@
         # lateral constraints
         lateral:
           velocity: [1.0, 1.38, 11.1]                   # [m/s]
-          max_accel_values: [10.5, 10.5, 10.5]             # [m/ss] |default all 0.5 YH
+          max_accel_values: [1.0, 1.0, 1.0]             # [m/ss] |default all 0.5 YH all 2.0 |SJ #SJ reduced it to a lower value to stop possible unfollowable paths from being planned
           min_jerk_values: [0.2, 0.2, 0.2]              # [m/sss] |default all 0.2 YH
-          max_jerk_values: [10.0, 10.0, 10.0]              # [m/sss] |default all 1.0 YH
+          max_jerk_values: [1.0, 1.0, 1.0]              # [m/sss] |default all 1.0 YH
 
         # longitudinal constraints
         longitudinal:
           nominal_deceleration: -1.0                    # [m/ss]
           nominal_jerk: 0.5                             # [m/sss]
           max_deceleration: -1.5                        # [m/ss]
-          max_jerk: 10.0                                 # [m/sss] |default 1.0 YH
+          max_jerk: 1.0                                 # [m/sss] |default 1.0 YH
           max_acceleration: 0.5                         # [m/ss]
           min_velocity_to_limit_max_acceleration: 2.78  # [m/ss]
 

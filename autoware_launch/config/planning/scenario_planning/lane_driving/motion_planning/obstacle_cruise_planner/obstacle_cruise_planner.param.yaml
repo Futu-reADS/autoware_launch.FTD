@@ -189,13 +189,13 @@
         moving:
           min_lat_margin: 0.2
           max_lat_margin: 1.0
-          min_ego_velocity: 0.28 #default 2.0 YH
-          max_ego_velocity: 0.5 #default 8.0 YH
+          min_ego_velocity: 0.75 #default 2.0 YH
+          max_ego_velocity: 1.0 #default 8.0 YH
         static:
           min_lat_margin: 0.2
           max_lat_margin: 1.0
-          min_ego_velocity: 0.28 #default 2.0 YH
-          max_ego_velocity: 0.5 #default 2.0 YH
+          min_ego_velocity: 0.75 #default 2.0 YH
+          max_ego_velocity: 1.0 #default 2.0 YH
 
       moving_object_speed_threshold: 0.3 # [m/s] how fast the object needs to move to be considered as "moving" |default 0.5 YH
       moving_object_hysteresis_range: 0.1 # [m/s] hysteresis range used to prevent chattering when obstacle moves close to moving_object_speed_threshold

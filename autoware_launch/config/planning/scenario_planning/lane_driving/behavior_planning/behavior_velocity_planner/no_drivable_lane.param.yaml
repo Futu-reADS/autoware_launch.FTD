@@ -1,5 +1,5 @@
 /**:
   ros__parameters:
     no_drivable_lane:
-      stop_margin: 1.5 # Stop margin before the no drivable lane [m]
+      stop_margin: 1.0 # Stop margin before the no drivable lane [m] #SJ FTPP default 1.5
       print_debug_info: false

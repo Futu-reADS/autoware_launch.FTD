@@ -9,8 +9,8 @@
         default_stopline_margin: 3.0
         stopline_overshoot_margin: 0.5
         path_interpolation_ds: 0.1
-        max_accel: 0.5 # -2.8 -> 0.5 Adjusted for low speed vehicle
-        max_jerk: 0.2 # -5.0 -> 0.2 Adjusted for low speed vehicle
+        max_accel: -1.0 #0.5 # -2.8 -> 0.5 Adjusted for low speed vehicle #SJ should be negative value
+        max_jerk: -1.0 #0.2 # -5.0 -> 0.2 Adjusted for low speed vehicle #SJ should be negative value
         delay_response_time: 1.0 # 0.5 -> 1.0 Adjusted for low speed vehicle
         enable_pass_judge_before_default_stopline: false
 

@@ -11,20 +11,20 @@
     curvature_calculation_distance: 2.0         # distance of points while curvature is calculating for the steer rate and lateral acceleration limit [m]
     # lateral acceleration limit parameters
     enable_lateral_acc_limit: true     # To toggle the lateral acc filter on and off. You can switch it dynamically at runtime.
-    max_lateral_accel: 1.0             # max lateral acceleration limit [m/ss]
-    min_curve_velocity: 2.0            # min velocity at lateral acceleration limit and steering angle rate limit [m/s]
+    max_lateral_accel: 2.0             # max lateral acceleration limit [m/ss] #SJ default 1.0  #slightly increased it to be able to take tighter curves/avoiding action. However, it is above the possible maximum.
+    min_curve_velocity: 0.25            # min velocity at lateral acceleration limit and steering angle rate limit [m/s] #SJ default 2.0 #The lateral acceleration limit and max steering angle rate will only be applied at velocities above this.
     decel_distance_before_curve: 3.5   # slow speed distance before a curve for lateral acceleration limit
     decel_distance_after_curve: 2.0    # slow speed distance after a curve for lateral acceleration limit
     min_decel_for_lateral_acc_lim_filter: -2.5  # deceleration limit applied in the lateral acceleration filter to avoid sudden braking [m/ss]
     # steering angle rate limit parameters
     enable_steering_rate_limit: true         # To toggle the steer rate filter on and off. You can switch it dynamically at runtime.
-    max_steering_angle_rate: 11.5            # maximum steering angle rate [degree/s]
+    max_steering_angle_rate: 10.0            # maximum steering angle rate [degree/s] #SJ default 11.5 #reduced it to be within the planning validators limit, or it will trip off the validator. 
     resample_ds: 0.1                         # distance between trajectory points [m]
-    curvature_threshold: 0.02                # if curvature > curvature_threshold, steeringRateLimit is triggered [1/m]
+    curvature_threshold: 0.02                # if curvature > curvature_threshold, steeringRateLimit is triggered [1/m] #SJ default 0.02 #The default curvature threshold value in the start planner shft pullout is 0.07. Might get in the way of that.
 
     # engage & replan parameters
     replan_vel_deviation: 5.53         # velocity deviation to replan initial velocity [m/s]
-    engage_velocity: 0.15 # 0.25              # engage velocity threshold [m/s] (if the trajectory velocity is higher than this value, use this velocity for engage vehicle speed)
+    engage_velocity: 0.25 #0.15 # 0.25              # engage velocity threshold [m/s] (if the trajectory velocity is higher than this value, use this velocity for engage vehicle speed) #SJ set it back to default, because vehicle wheels wont turn if lower in the sim.
     engage_acceleration: 0.5           # engage acceleration [m/ss] (use this acceleration when engagement)
     engage_exit_ratio: 0.5             # exit engage sequence to normal velocity planning when the velocity exceeds engage_exit_ratio x engage_velocity.
     stop_dist_to_prohibit_engage: 0.2  # if the stop point is in this distance, the speed is set to 0 not to move the vehicle [m]
@@ -34,13 +34,14 @@
     stopping_distance: 1.2    # distance for the stopping_velocity [m]. 0 means the stopping velocity is not applied.
 
     # path extraction parameters
-    extract_ahead_dist: 200.0         # forward trajectory distance used for planning [m]
-    extract_behind_dist: 5.0          # backward trajectory distance used for planning [m]
+    extract_ahead_dist: 30.0         # forward trajectory distance used for planning [m] #SJ default 200.00  #Set it to the distance planned by the behaviour_path_planner. No use smoothing out velocity for a path that is not planned.
+    extract_behind_dist: 2.5          # backward trajectory distance used for planning [m] #SJ default 5.0 #IMPORTANT change - The higher the value, the larger the arc length of the smoothed out curve. 
+                                      # Higher values mean any maneuvers will have a much smoother and shallower curve. Lower values mean the curve arc length is smaller and can have a smaller radius. 
     delta_yaw_threshold: 1.0472       # Allowed delta yaw between ego pose and trajectory pose [radian]
 
     # resampling parameters for optimization
-    max_trajectory_length: 200.0        # max trajectory length for resampling [m]
-    min_trajectory_length: 180.0        # min trajectory length for resampling [m]
+    max_trajectory_length: 40.0        # max trajectory length for resampling [m]
+    min_trajectory_length: 25.0        # min trajectory length for resampling [m]
     resample_time: 2.0                  # resample total time for dense sampling [s]
     dense_resample_dt: 0.2              # resample time interval for dense sampling [s]
     dense_min_interval_distance: 0.1    # minimum points-interval length for dense sampling [m]
