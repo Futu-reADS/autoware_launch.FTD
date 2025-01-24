@@ -35,8 +35,9 @@
   <!-- Map -->
   
   <!-- <arg name="lanelet2_map_file" default="okinawa_full_single_loop_fitted_3.0.osm" description="lanelet2 map file name"/> -->
-  <arg name="lanelet2_map_file" default="tianjin_labobldg_short.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="tianjin_labobldg_outdoor.pcd" description="pointcloud map file name"/>
+  <!-- arg name="lanelet2_map_file" default="tianjin_labobldg_short_01_24_2.osm" description="lanelet2 map file name"/-->
+  <arg name="lanelet2_map_file" default="tianjin_labobldg_indoor_2.osm" description="lanelet2 map file name"/>
+  <arg name="pointcloud_map_file" default="tianjin_labobldg_outdoor_20250123.pcd" description="pointcloud map file name"/>
   <!-- System -->
   <arg name="system_run_mode" default="online" description="run mode in system"/>
   <arg name="launch_system_monitor" default="false" description="launch system monitor"/>
