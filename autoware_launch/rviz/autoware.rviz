@@ -4,13 +4,20 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
+        - /System1
+        - /System1/Grid1
         - /Map1
         - /Map1/PointCloudMap1
+        - /Sensing1/LiDAR1
+        - /Sensing1/LiDAR1/ConcatenatePointCloud1
         - /Sensing1/LiDAR1/ConcatenatePointCloud1/Autocompute Value Bounds1
         - /Perception1/ObjectRecognition1
         - /Perception1/ObjectRecognition1/Prediction1
         - /Perception1/ObjectRecognition1/Prediction1/PredictedObjects1
-      Splitter Ratio: 0.557669460773468
+        - /PointCloud21/Topic1
+        - /MarkerArray1
+      Splitter Ratio: 0.45579567551612854
     Tree Height: 148
   - Class: rviz_common/Selection
     Name: Selection
@@ -50,7 +57,7 @@ Visualization Manager:
           Cell Size: 1
           Class: rviz_default_plugins/Grid
           Color: 160; 160; 164
-          Enabled: false
+          Enabled: true
           Line Style:
             Line Width: 0.029999999329447746
             Value: Lines
@@ -61,9 +68,9 @@ Visualization Manager:
             Y: 0
             Z: 0
           Plane: XY
-          Plane Cell Count: 10
+          Plane Cell Count: 100
           Reference Frame: <Fixed Frame>
-          Value: false
+          Value: true
         - Class: rviz_common/Group
           Displays:
             - Alpha: 0.30000001192092896
@@ -223,14 +230,14 @@ Visualization Manager:
           Enabled: true
           Name: Lanelet2VectorMap
           Namespaces:
-            center_lane_line: false
-            center_line_arrows: false
-            lane_start_bound: false
+            center_lane_line: true
+            center_line_arrows: true
+            lane_start_bound: true
             lanelet direction: true
-            lanelet_id: false
+            lanelet_id: true
             left_lane_bound: true
             right_lane_bound: true
-            road_lanelets: false
+            road_lanelets: true
           Topic:
             Depth: 5
             Durability Policy: Transient Local
@@ -265,7 +272,7 @@ Visualization Manager:
               Name: ConcatenatePointCloud
               Position Transformer: XYZ
               Selectable: false
-              Size (Pixels): 1
+              Size (Pixels): 3
               Size (m): 0.019999999552965164
               Style: Points
               Topic:
@@ -332,7 +339,7 @@ Visualization Manager:
               Value: true
           Enabled: false
           Name: GNSS
-      Enabled: false
+      Enabled: true
       Name: Sensing
     - Class: rviz_common/Group
       Displays:
@@ -497,12 +504,7 @@ Visualization Manager:
               Enabled: true
               Name: MonteCarloInitialPose
               Namespaces:
-                initial_pose_index_color_marker: true
-                initial_pose_iteration_color_marker: true
-                initial_pose_transform_probability_color_marker: true
-                result_pose_index_color_marker: true
-                result_pose_iteration_color_marker: true
-                result_pose_transform_probability_color_marker: true
+                {}
               Topic:
                 Depth: 5
                 Durability Policy: Volatile
@@ -879,10 +881,10 @@ Visualization Manager:
                 Alpha: 1
                 Color: 230; 230; 50
                 Offset from BaseLink: 0
-                Rear Overhang: 0.25
+                Rear Overhang: 0.2150000035762787
                 Value: false
-                Vehicle Length: 1.6299999952316284
-                Vehicle Width: 0.9549999833106995
+                Vehicle Length: 1.1749999523162842
+                Vehicle Width: 0.5379999876022339
               View Path:
                 Alpha: 0.9990000128746033
                 Color: 0; 0; 0
@@ -933,10 +935,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 0.25
+                        Rear Overhang: 0.2150000035762787
                         Value: false
-                        Vehicle Length: 1.6299999952316284
-                        Vehicle Width: 0.9549999833106995
+                        Vehicle Length: 1.1749999523162842
+                        Vehicle Width: 0.5379999876022339
                       View Path:
                         Alpha: 0.4000000059604645
                         Color: 0; 0; 0
@@ -1283,10 +1285,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 0.25
+                        Rear Overhang: 0.2150000035762787
                         Value: false
-                        Vehicle Length: 1.6299999952316284
-                        Vehicle Width: 0.9549999833106995
+                        Vehicle Length: 1.1749999523162842
+                        Vehicle Width: 0.5379999876022339
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -1583,10 +1585,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 0.25
+                        Rear Overhang: 0.2150000035762787
                         Value: false
-                        Vehicle Length: 1.6299999952316284
-                        Vehicle Width: 0.9549999833106995
+                        Vehicle Length: 1.1749999523162842
+                        Vehicle Width: 0.5379999876022339
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -1633,10 +1635,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 0.25
+                        Rear Overhang: 0.2150000035762787
                         Value: false
-                        Vehicle Length: 1.6299999952316284
-                        Vehicle Width: 0.9549999833106995
+                        Vehicle Length: 1.1749999523162842
+                        Vehicle Width: 0.5379999876022339
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -1683,10 +1685,10 @@ Visualization Manager:
                         Alpha: 1
                         Color: 230; 230; 50
                         Offset from BaseLink: 0
-                        Rear Overhang: 0.25
+                        Rear Overhang: 0.2150000035762787
                         Value: false
-                        Vehicle Length: 1.6299999952316284
-                        Vehicle Width: 0.9549999833106995
+                        Vehicle Length: 1.1749999523162842
+                        Vehicle Width: 0.5379999876022339
                       View Path:
                         Alpha: 0.30000001192092896
                         Color: 115; 210; 22
@@ -2769,10 +2771,10 @@ Visualization Manager:
             Alpha: 1
             Color: 230; 230; 50
             Offset from BaseLink: 0
-            Rear Overhang: 0.25
+            Rear Overhang: 0.2150000035762787
             Value: false
-            Vehicle Length: 1.6299999952316284
-            Vehicle Width: 0.9549999833106995
+            Vehicle Length: 1.1749999523162842
+            Vehicle Width: 0.5379999876022339
           View Path:
             Alpha: 1
             Color: 255; 255; 255
@@ -2942,6 +2944,7 @@ Visualization Manager:
                   Lanelet2VectorMap: true
                   PointCloudMap: true
                   Value: false
+                MarkerArray: true
                 Perception:
                   ObjectRecognition:
                     Detection:
@@ -3092,6 +3095,7 @@ Visualization Manager:
                     ScenarioTrajectory: true
                     Value: true
                   Value: false
+                PointCloud2: true
                 Sensing:
                   GNSS:
                     PoseWithCovariance: true
@@ -4160,6 +4164,86 @@ Visualization Manager:
           Name: Control
       Enabled: false
       Name: Debug
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 203
+      Min Color: 0; 0; 0
+      Min Intensity: 5
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.029999999329447746
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /sensing/lidar/front/pointcloud_raw_ex
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 255
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /sensing/lidar/top/hesai_points
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        ParcelPal stop: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /parcelpal_stops
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 42; 42; 42
@@ -4257,26 +4341,21 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz_default_plugins/Orbit
-      Distance: 61.794036865234375
+      Angle: -0.004999983124434948
+      Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Focal Point:
-        X: 13.864376068115234
-        Y: -0.8672878742218018
-        Z: 6.387889385223389
-      Focal Shape Fixed Size: true
-      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.329796552658081
+      Scale: 6.113978385925293
       Target Frame: base_link
-      Value: Orbit (rviz_default_plugins)
-      Yaw: 2.607377290725708
+      Value: TopDownOrtho (rviz_default_plugins)
+      X: -9.628337860107422
+      Y: -51.295509338378906
     Saved:
       - Class: rviz_default_plugins/ThirdPersonFollower
         Distance: 18
@@ -4325,7 +4404,7 @@ Window Geometry:
   Hide Right Dock: false
   PointcloudOnCamera:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001d90000039efc0200000010fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000000d1000000c900fffffffc00000114000000c8000000c10100001cfa000000000100000002fb0000000a0056006900650077007301000000000000033c0000010000fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000000ffffffff0000009d00fffffffb00000024004100750074006f00770061007200650053007400610074006500500061006e0065006c01000001e2000001800000017000fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d0065007200610100000682000000eb0000000000000000fb0000000a0049006d0061006700650100000505000002680000000000000000fb0000002c0049006e0069007400690061006c0050006f007300650042007500740074006f006e00500061006e0065006c000000068f000000de0000000000000000fb0000002c0049006e0069007400690061006c0050006f007300650042007500740074006f006e00500061006e0065006c000000068f000000de0000000000000000fb00000030005200650063006f0067006e006900740069006f006e0052006500730075006c0074004f006e0049006d006100670065000000034b000000280000002800fffffffb0000002a004100750074006f0077006100720065004400610074006500540069006d006500500061006e0065006c0100000368000000440000004100fffffffb000000240050006f0069006e00740063006c006f00750064004f006e00430061006d00650072006101000003b2000000290000002800ffffff000000010000015f000006fffc0200000002fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000e7a0000005afc0100000001fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000e7a0000005afc0100000002fb0000000800540069006d0065010000000000000e7a0000000000000000fb0000000800540069006d00650100000000000004500000000000000000000001be0000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001ff0000039efc0200000010fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000000d1000000c900fffffffc00000114000000c8000000c10100001cfa000000000100000002fb0000000a0056006900650077007301000000000000033c0000010000fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000000ffffffff0000009d00fffffffb00000024004100750074006f00770061007200650053007400610074006500500061006e0065006c01000001e2000001800000017200fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d0065007200610100000682000000eb0000000000000000fb0000000a0049006d0061006700650100000505000002680000000000000000fb0000002c0049006e0069007400690061006c0050006f007300650042007500740074006f006e00500061006e0065006c000000068f000000de0000000000000000fb0000002c0049006e0069007400690061006c0050006f007300650042007500740074006f006e00500061006e0065006c000000068f000000de0000000000000000fb00000030005200650063006f0067006e006900740069006f006e0052006500730075006c0074004f006e0049006d006100670065000000034b000000280000002800fffffffb0000002a004100750074006f0077006100720065004400610074006500540069006d006500500061006e0065006c0100000368000000440000004100fffffffb000000240050006f0069006e00740063006c006f00750064004f006e00430061006d00650072006101000003b2000000290000002800ffffff000000010000015f000006fffc0200000002fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000e7a0000005afc0100000001fb0000000a00560069006500770073030000004e00000080000002e1000001970000000300000e7a0000005afc0100000002fb0000000800540069006d0065010000000000000e7a0000000000000000fb0000000800540069006d00650100000000000004500000000000000000000005350000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RecognitionResultOnImage:
     collapsed: false
   Selection:
@@ -4334,6 +4413,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 925
-  X: 70
+  Width: 1850
+  X: 1094
   Y: 27
