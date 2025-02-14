@@ -18,7 +18,7 @@
         check_motorcycle: true
         check_pedestrian: true
         check_unknown: true
-      th_distance_to_middle_of_the_road: 0.6 #default 0.5 YH #SJ- just to make sure added another decimal point.
+      th_distance_to_middle_of_the_road: 0.5 #default 0.5 YH #SJ- just to make sure added another decimal point.
       center_line_path_interval: 1.0
       # shift pull out
       enable_shift_pull_out: true
@@ -43,7 +43,7 @@
       backward_velocity: -0.5 #SJ default -1.0 #Reduced it to ParcelPal specs
       pull_out_max_steer_angle: 0.70 #SJ default 0.26 YH 0.50 #Increased it to ParcelPal specs
       # search start pose backward
-      enable_back: false
+      enable_back: false #default true YH, supresses backward driving
       search_priority: "efficient_path"  # "efficient_path" or "short_back_distance"
       max_back_distance: 7.0 #default 20.0 YH
       backward_search_resolution: 0.5 #default 2.0 YH
