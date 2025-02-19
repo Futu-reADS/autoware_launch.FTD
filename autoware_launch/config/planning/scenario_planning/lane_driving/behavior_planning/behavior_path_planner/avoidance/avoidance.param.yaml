@@ -59,7 +59,7 @@
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.5
         unknown:
-          th_moving_speed: 1.0                           #default 0.28 YH
+          th_moving_speed: 0.28                           #default 0.28 YH
           th_moving_time: 1.0
           longitudinal_margin: 0.0
           lateral_margin:
