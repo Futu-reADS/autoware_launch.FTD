@@ -78,8 +78,8 @@
       stop_obstacle_hold_time_threshold : 1.0 # maximum time for holding closest stop obstacle
 
       # hysteresis for cruise and stop
-      obstacle_velocity_threshold_from_cruise_to_stop : 0.3 # stop planning is executed to the obstacle whose velocity is less than this value [m/s] |default 3.0 YH
-      obstacle_velocity_threshold_from_stop_to_cruise : 0.4 # stop planning is executed to the obstacle whose velocity is less than this value [m/s] |default 3.5 YH
+      obstacle_velocity_threshold_from_cruise_to_stop : 0.28 # stop planning is executed to the obstacle whose velocity is less than this value [m/s] |default 3.0 YH
+      obstacle_velocity_threshold_from_stop_to_cruise : 0.3 # stop planning is executed to the obstacle whose velocity is less than this value [m/s] |default 3.5 YH
 
       # if crossing vehicle is determined as target obstacles or not
       crossing_obstacle:
@@ -197,7 +197,7 @@
           min_ego_velocity: 0.75 #default 2.0 YH
           max_ego_velocity: 1.0 #default 2.0 YH
 
-      moving_object_speed_threshold: 0.3 # [m/s] how fast the object needs to move to be considered as "moving" |default 0.5 YH
+      moving_object_speed_threshold: 0.28 # [m/s] how fast the object needs to move to be considered as "moving" |default 0.5 YH
       moving_object_hysteresis_range: 0.1 # [m/s] hysteresis range used to prevent chattering when obstacle moves close to moving_object_speed_threshold
 
       time_margin_on_target_velocity: 1.5 # [s]
