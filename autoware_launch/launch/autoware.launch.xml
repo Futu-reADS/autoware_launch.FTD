@@ -23,7 +23,7 @@
   <arg name="launch_control" default="true" description="launch control"/>
   <arg name="launch_api" default="true" description="launch api"/>
 
-  <arg name="master_planner" default="true" description="launch MP"/>
+  <arg name="master_planner" default="false" description="launch MP"/>
 
   <!-- Global parameters -->
   <arg name="use_sim_time" default="false" description="use_sim_time"/>
@@ -117,11 +117,6 @@
     </include>
   </group>
 
-  <!-- Master Planner -->
-  <group if="$(var master_planner)">
-    <include file="$(find-pkg-share master_planner)/launch/master_planner.launch.xml"/>
-  </group>
-
   <!-- Control -->
   <group if="$(var launch_control)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_control_component.launch.xml"/>
@@ -151,4 +146,9 @@
     <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_viewer.launch.xml"/>
   </group>
 
+  <!-- Master Planner -->
+  <group if="$(var master_planner)">
+    <include file="$(find-pkg-share master_planner)/launch/master_planner.launch.xml"/>
+  </group>
+  
 </launch>
