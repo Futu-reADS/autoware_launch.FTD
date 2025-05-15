@@ -23,7 +23,7 @@
   <arg name="launch_control" default="true" description="launch control"/>
   <arg name="launch_api" default="true" description="launch api"/>
 
-  <arg name="master_planner" default="false" description="launch MP"/>
+  <arg name="fault_detection" default="true" description="launch fault detection"/>
 
   <!-- Global parameters -->
   <arg name="use_sim_time" default="false" description="use_sim_time"/>
@@ -146,9 +146,9 @@
     <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_viewer.launch.xml"/>
   </group>
 
-  <!-- Master Planner -->
-  <group if="$(var master_planner)">
-    <include file="$(find-pkg-share master_planner)/launch/master_planner.launch.xml"/>
+  <!-- Fault Detection -->
+  <group if="$(var fault_detection)">
+    <include file="$(find-pkg-share fault_detection)/launch/fault_detection.launch.xml"/>
   </group>
   
 </launch>
