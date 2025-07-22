@@ -206,3 +206,31 @@
     warn_rate: 5.0
     error_rate: 1.0
     timeout: 1.0
+
+#
+
+- module: sensing
+  mode: [online, logging_simulation]
+  type: autonomous
+  args:
+    node_name_suffix: 3d_lidar_topic
+    topic: /sensing/lidar/top/hesai_points
+    topic_type: sensor_msgs/msg/PointCloud2
+    best_effort: true
+    transient_local: false
+    warn_rate: 5.0
+    error_rate: 1.0
+    timeout: 0.5
+
+- module: sensing
+  mode: [online, logging_simulation]
+  type: autonomous
+  args:
+    node_name_suffix: 2d_lidar_topic
+    topic: /sensing/lidar/front/pointcloud_raw_ex
+    topic_type: sensor_msgs/msg/PointCloud2
+    best_effort: true
+    transient_local: false
+    warn_rate: 5.0
+    error_rate: 1.0
+    timeout: 0.5
