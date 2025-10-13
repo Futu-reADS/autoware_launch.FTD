@@ -9,4 +9,4 @@
     display_on_terminal: false # show error msg on terminal
 
     thresholds:
-      max_distance_deviation: 1.0
+      max_distance_deviation: 3.0
