@@ -34,7 +34,7 @@
   <arg name="check_external_emergency_heartbeat" default="false"/>
   <!-- Map -->
   
-  <arg name="lanelet2_map_file" default="okinawa_outdoor_aligned_lanelet_map_long_w3m_cw.osm" description="lanelet2 map file name"/>
+  <arg name="lanelet2_map_file" default="okinawa_outdoor_aligned_lanelet_map_full_cw.osm" description="lanelet2 map file name"/>
   <arg name="pointcloud_map_file" default="okinawa_outdoor_aligned_maps" description="pointcloud map file name"/>
   <!-- System -->
   <arg name="system_run_mode" default="online" description="run mode in system"/>
@@ -139,9 +139,9 @@
   </group>
 
   <!-- FUTU-RE Tools -->
+  <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_editor.launch.xml"/>
   <group if="$(var test_tools)">
     <include file="$(find-pkg-share control_performance_analysis)/launch/control_performance_analysis.launch.xml"/>
-    <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_viewer.launch.xml"/>
   </group>
 
   <!-- Fault Detection -->
