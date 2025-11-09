@@ -123,7 +123,7 @@
   <!-- API -->
   <group if="$(var launch_api)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_autoware_api_component.launch.xml"/>
-  </group>
+  </group> -->
 
   <!-- Tools -->
   <group>
@@ -139,7 +139,10 @@
   </group>
 
   <!-- FUTU-RE Tools -->
-  <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_editor.launch.xml"/>
+  <include file="$(find-pkg-share parcelpal_stop_editor)/parcelpal_stop_editor.launch.xml">
+    <arg name="lanelet2_map_path" value="$(var map_path)/$(var lanelet2_map_file)"/>
+  </include>
+
   <group if="$(var test_tools)">
     <include file="$(find-pkg-share control_performance_analysis)/launch/control_performance_analysis.launch.xml"/>
   </group>
