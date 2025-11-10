@@ -123,7 +123,7 @@
   <!-- API -->
   <group if="$(var launch_api)">
     <include file="$(find-pkg-share autoware_launch)/launch/components/tier4_autoware_api_component.launch.xml"/>
-  </group> -->
+  </group>
 
   <!-- Tools -->
   <group>
