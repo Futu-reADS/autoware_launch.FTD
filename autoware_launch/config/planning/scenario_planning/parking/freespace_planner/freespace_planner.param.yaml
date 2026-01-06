@@ -19,8 +19,8 @@
     robot_length: 4.5
     robot_width: 1.75
     robot_base2back: 1.0
-    minimum_turning_radius: 9.0
-    maximum_turning_radius: 9.0
+    minimum_turning_radius: 1.0 # HM 20260103 mod from 9.0
+    maximum_turning_radius: 1.0 # HM 20260103 mod from 9.0
     turning_radius_size: 1
     # search configs
     theta_size: 144
