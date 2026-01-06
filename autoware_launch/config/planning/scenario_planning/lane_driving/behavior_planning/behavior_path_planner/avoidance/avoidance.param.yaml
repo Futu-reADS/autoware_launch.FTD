@@ -63,11 +63,11 @@
           th_moving_time: 1.0
           longitudinal_margin: 0.0
           lateral_margin:
-            soft_margin: 0.25                           # [m] default 0.7 YH
+            soft_margin: 0.3 # 0.2 # HM 20260103 from 0.25                           # [m] default 0.7 YH
             hard_margin: 0.2                          # [m] default -0.2 YH
             hard_margin_for_parked_vehicle: 0.2       # [m] default -0.2 YH
           max_expand_ratio: 0.0
-          envelope_buffer_margin: 0.05    #default 0.1 YH
+          envelope_buffer_margin: 0.0 # 0.05    #default 0.1 YH
         bicycle:
           th_moving_speed: 0.28
           th_moving_time: 1.0
@@ -114,7 +114,7 @@
           motorcycle: true                              # [-]
           pedestrian: true                              # [-]
         # detection range
-        object_check_goal_distance: 5.0                # [m] |default 20.0 YH
+        object_check_goal_distance: 3.0 # HM 20260103 mod from 5.0                # [m] |default 20.0 YH
         object_check_return_pose_distance: 20.0         # [m]
         # lost object compensation
         max_compensation_time: 5.0  #default 2.0 YH
@@ -139,7 +139,7 @@
         # params for avoidance of vehicle type objects that are ambiguous as to whether they are parked.
         avoidance_for_ambiguous_vehicle:
           enable: true                                  # [-]
-          closest_distance_to_wait_and_see: 10.0        # [m]
+          closest_distance_to_wait_and_see: 2.0 # HM 20260104 from 10.0        # [m]
           condition:
             th_stopped_time: 1.0                        # [s] |default 3.0 YH
             th_moving_distance: 2.0                     # [m] |default 1.0 YH
@@ -201,11 +201,11 @@
         lateral:
           th_avoid_execution: 0.0                     # [m] FOR DEVELOPER |default 0.09 YH
           th_small_shift_length: 0.047                  # [m] FOR DEVELOPER |default 0.101 YH
-          soft_drivable_bound_margin: 0.1                # [m] |default 0.3 YH
+          soft_drivable_bound_margin: 0.05 # HM 20260103 mod from 0.1                # [m] |default 0.3 YH
           hard_drivable_bound_margin: 0.0                # [m] |default 0.3 YH
           max_right_shift_length: 5.0                   # [m] FOR DEVELOPER
           max_left_shift_length: 5.0                    # [m] FOR DEVELOPER
-          max_deviation_from_lane: 0.0                  # [m] |default 0.2 YH seems not to have an effect when there is only one lane
+          max_deviation_from_lane: 0.5 # HM20260103 # 0.0                  # [m] |default 0.2 YH seems not to have an effect when there is only one lane
           # approve the next shift line after reaching this percentage of the current shift line length.
           # this parameter is added to allow waiting for the return of shift approval until the occlusion behind the avoid target is clear.
           # this feature can be disabled by setting this parameter to 0.0.
@@ -224,7 +224,7 @@
         return_dead_line:
           goal:
             enable: true                                # [-]
-            buffer: 3.0                                 # [m]
+            buffer: 0.0 # 1.0 # HM 20250104 from 3.0                                 # [m]
           traffic_light:
             enable: true                                # [-]
             buffer: 3.0                                 # [m]
@@ -240,7 +240,7 @@
 
       # For stop maneuver
       stop:
-        max_distance: 20.0                              # [m] |default 20.0 YH
+        max_distance: 2.0 # 20.0                              # [m] |default 20.0 YH
         stop_buffer: 1.0                                # [m] FOR DEVELOPER
 
       policy:
@@ -273,7 +273,7 @@
           velocity: [1.0, 1.38, 11.1]                   # [m/s]
           max_accel_values: [1.0, 1.0, 1.0]             # [m/ss] |default all 0.5 YH all 2.0 |SJ #SJ reduced it to a lower value to stop possible unfollowable paths from being planned
           min_jerk_values: [0.2, 0.2, 0.2]              # [m/sss] |default all 0.2 YH
-          max_jerk_values: [1.0, 1.0, 1.0]              # [m/sss] |default all 1.0 YH
+          max_jerk_values: [5.0, 5.0, 5.0]  # [1.0, 1.0, 1.0]              # [m/sss] |default all 1.0 YH
 
         # longitudinal constraints
         longitudinal:
@@ -293,4 +293,4 @@
 
       # for debug
       debug:
-        marker: false
+        marker: true

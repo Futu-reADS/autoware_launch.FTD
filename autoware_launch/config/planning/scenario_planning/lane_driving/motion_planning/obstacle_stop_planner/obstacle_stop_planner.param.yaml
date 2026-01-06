@@ -16,9 +16,9 @@
     stop_planner:
       # params for stop position
       stop_position:
-        max_longitudinal_margin: 5.0             # stop margin distance from obstacle on the path [m]
+        max_longitudinal_margin: 3.0 # HM 20260104 mod from 5.0             # stop margin distance from obstacle on the path [m]
         max_longitudinal_margin_behind_goal: 2.5 # stop margin distance from obstacle behind goal on the path [m]
-        min_longitudinal_margin: 5.0             # stop margin distance when any other stop point is inserted in stop margin [m]
+        min_longitudinal_margin: 3.0 # HM 20260104 mod from 5.0             # stop margin distance when any other stop point is inserted in stop margin [m]
         hold_stop_margin_distance: 0.0           # the ego keeps stopping if the ego is in this margin [m]
 
       # params for detection area
@@ -27,7 +27,7 @@
         vehicle_lateral_margin: 0.0          # margin of vehicle footprint [m]
         pedestrian_lateral_margin: 0.0       # margin of pedestrian footprint [m]
         unknown_lateral_margin: 0.0          # margin of unknown footprint [m]
-        step_length: 1.0                     # step length for pointcloud search range [m]
+        step_length: 0.1 # 1.0                     # step length for pointcloud search range [m]
         enable_stop_behind_goal_for_obstacle: True # enable extend trajectory after goal lane for obstacle detection
 
 
