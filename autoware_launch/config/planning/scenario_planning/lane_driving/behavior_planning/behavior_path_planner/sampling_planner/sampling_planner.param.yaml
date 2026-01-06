@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     common:
-      output_delta_arc_length: 0.5  #  [m] delta arc length for output trajectory
+      output_delta_arc_length: 0.2 # HM 20260104 mod from 0.5  #  [m] delta arc length for output trajectory
 
     debug:
       enable_calculation_time_info: false  # flag to print calculation times

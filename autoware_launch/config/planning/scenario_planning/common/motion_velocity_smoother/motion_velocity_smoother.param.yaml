@@ -35,7 +35,7 @@
 
     # path extraction parameters
     extract_ahead_dist: 30.0         # forward trajectory distance used for planning [m] #SJ default 200.00  #Set it to the distance planned by the behaviour_path_planner. No use smoothing out velocity for a path that is not planned.
-    extract_behind_dist: 2.5          # backward trajectory distance used for planning [m] #SJ default 5.0 #IMPORTANT change - The higher the value, the larger the arc length of the smoothed out curve. 
+    extract_behind_dist: 1.0 # HM 20260103 from 2.5          # backward trajectory distance used for planning [m] #SJ default 5.0 #IMPORTANT change - The higher the value, the larger the arc length of the smoothed out curve. 
                                       # Higher values mean any maneuvers will have a much smoother and shallower curve. Lower values mean the curve arc length is smaller and can have a smaller radius. 
     delta_yaw_threshold: 1.0472       # Allowed delta yaw between ego pose and trajectory pose [radian]
 
