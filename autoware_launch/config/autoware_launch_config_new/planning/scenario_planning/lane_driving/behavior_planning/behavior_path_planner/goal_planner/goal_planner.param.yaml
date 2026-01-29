@@ -67,7 +67,7 @@
         # parallel parking path
         parallel_parking:
           path_interval: 1.0
-          max_steer_angle: 0.6 # HM 20251224 0.35  # 20deg
+          max_steer_angle: 0.70 # HM 20260106 mod from 0.35  # 20deg
           forward:
             enable_arc_forward_parking: true
             after_forward_parking_straight_distance: 2.0
@@ -90,8 +90,8 @@
           velocity: 0.25 #SJ FTPP default 1.0
           vehicle_shape_margin: 1.0
           time_limit: 3000.0
-          minimum_turning_radius: 2.0 # HM 20251224 5.0
-          maximum_turning_radius: 2.0  # HM 20251224 5.0
+          minimum_turning_radius: 1.0 # HM 20260103 from 5.0
+          maximum_turning_radius: 1.0 # HM 20260103 from 5.0
           turning_radius_size: 1
           # search configs
           search_configs:

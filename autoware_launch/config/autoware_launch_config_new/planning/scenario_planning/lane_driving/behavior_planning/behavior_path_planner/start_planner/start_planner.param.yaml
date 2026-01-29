@@ -32,7 +32,7 @@
       lateral_acceleration_sampling_num: 3
       minimum_lateral_acc: 0.15
       maximum_lateral_acc: 2.0 #SJ default 0.5 #SJ slightly increased it to allow for a tighter pull out if stopped in narrow places.
-      maximum_curvature: 0.07
+      maximum_curvature: 1.0 # HM 20260103 from 0.07
       # geometric pull out
       enable_geometric_pull_out: true
       geometric_collision_check_distance_from_end: 0.0
@@ -64,8 +64,8 @@
         velocity: 0.25 #SJ FTPP default 1.0
         vehicle_shape_margin: 1.0
         time_limit: 3000.0
-        minimum_turning_radius: 2.0 # HM 20251224 in Binhai 5.0
-        maximum_turning_radius: 2.0 # HM 20251224 in Binhai  5.0
+        minimum_turning_radius: 1.0 # HM 20260103 from 5.0
+        maximum_turning_radius: 1.0 # HM 20260103 from 5.0
         turning_radius_size: 1
         # search configs
         search_configs:

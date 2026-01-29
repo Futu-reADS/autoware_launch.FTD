@@ -34,9 +34,25 @@
   <arg name="check_external_emergency_heartbeat" default="false"/>
   <!-- Map -->
   
-  <arg name="lanelet2_map_file" default="tianjin_2025_Dec13.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="tianjin_labobldg_outdoor_20250123.pcd" description="pointcloud map file name"/>
-  <!-- System -->
+  <!-- <arg name="lanelet2_map_file" default="tianjin_2025_Dec13.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2025Fix.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2025_12_24.osm" description="lanelet2 map file name"/>-->
+  <arg name="lanelet2_map_file" default="Binhai2026BigLoops.osm" description="lanelet2 map file name"/>
+  
+  <!-- <arg name="lanelet2_map_file" default="Binhai2025.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2025Loopfix.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2025LoopMain.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2025ALL.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="pointcloud_map_file" default="tianjin_labobldg_outdoor_20250123.pcd" description="pointcloud map file name"/> -->
+  <!-- <arg name="pointcloud_map_file" default="23_01_full_20cm_12_19.pcd" description="pointcloud map file name"/> -->
+  <!-- <arg name="pointcloud_map_file" default="23_01_full_20cm_12_19_cleaned.pcd" description="pointcloud map file name"/> -->
+<!-- <arg name="pointcloud_map_file" default="23_01_full_20cm_1223_cleaned_Kirill_NotCompressed.pcd" description="pointcloud map file name"/> -->
+<!--<arg name="pointcloud_map_file" default="Binhai_2412.pcd" description="pointcloud map file name"/>-->
+  <!-- <arg name="pointcloud_map_file" default="Binhai_Cleaned2026.pcd" description="pointcloud map file name"/> -->
+  <arg name="pointcloud_map_file" default="Binhai_2026Main.pcd" description="pointcloud map file name"/>
+
+
+  <arg name="pointcloud_map_file" default="point cloud map.pcd" description="pointcloud map file name"/>  
   <arg name="system_run_mode" default="online" description="run mode in system"/>
   <arg name="launch_system_monitor" default="true" description="launch system monitor"/>
   <arg name="launch_dummy_diag_publisher" default="false" description="launch dummy diag publisher"/>
