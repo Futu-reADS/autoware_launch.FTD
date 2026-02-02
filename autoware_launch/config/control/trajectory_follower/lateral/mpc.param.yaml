@@ -1,28 +1,28 @@
 /**:
   ros__parameters:
     # -- system --
-    traj_resample_dist: 0.05 # 20260125 HM mod from 0.1         # path resampling interval [m]
+    traj_resample_dist: 0.2 # 20260201 HM mod from 0.05 # 20260125 HM mod from 0.1         # path resampling interval [m]
     use_steer_prediction: false     # flag for using steer prediction (do not use steer measurement)
-    admissible_position_error: 5.0  # stop mpc calculation when error is larger than the following value
-    admissible_yaw_error_rad: 1.57  # stop mpc calculation when error is larger than the following value
+    admissible_position_error: 3.0 # 20260201 HM mod from 5.0  # stop mpc calculation when error is larger than the following value
+    admissible_yaw_error_rad: 1.0 # 20260201 HM mod from 1.57  # stop mpc calculation when error is larger than the following value
 
     # -- path smoothing --
     enable_path_smoothing: true # 20260124 HM mod from false   # flag for path smoothing LJ false
-    path_filter_moving_ave_num: 25 # 20260124 HM mod from 25 # param of moving average filter for path smoothing
-    curvature_smoothing_num_traj: 15        # point-to-point index distance used in curvature calculation (for trajectory): curvature is calculated from three points p(i-num), p(i), p(i+num)
-    curvature_smoothing_num_ref_steer: 15   # point-to-point index distance used in curvature calculation (for steer command reference): curvature is calculated from three points p(i-num), p(i), p(i+num)
+    path_filter_moving_ave_num: 15 # 20260201 HM mod from 25 # 20260124 HM mod from 25 # param of moving average filter for path smoothing
+    curvature_smoothing_num_traj: 10 # 20260201 HM mod from 15        # point-to-point index distance used in curvature calculation (for trajectory): curvature is calculated from three points p(i-num), p(i), p(i+num)
+    curvature_smoothing_num_ref_steer: 10 # 20260201 HM mod from 15   # point-to-point index distance used in curvature calculation (for steer command reference): curvature is calculated from three points p(i-num), p(i), p(i+num)
 
     # -- trajectory extending --
     extend_trajectory_for_end_yaw_control: false  # flag of trajectory extending for terminal yaw control
 
     # -- mpc optimization --
     qp_solver_type: "osqp"                       # optimization solver option (unconstraint_fast or osqp)
-    mpc_prediction_horizon: 100  # 2020124 HM mod from 50                   # prediction horizon step
-    mpc_prediction_dt: 0.1                       # prediction horizon period [s]
-    mpc_weight_lat_error: 20.0 # 20260124 HM mod from 1.0                    # lateral error weight in matrix Q
-    mpc_weight_heading_error: 1.0 # 20260124 HM mod from 0.0                # heading error weight in matrix Q
+    mpc_prediction_horizon: 30 # 20260201 HM mod from 100  # 2020124 HM mod from 50                   # prediction horizon step
+    mpc_prediction_dt: 0.15 # 20260201 HM mod from 0.1                       # prediction horizon period [s]
+    mpc_weight_lat_error: 5.0 # 20260201 HM mod from 20.0 # 20260124 HM mod from 1.0                    # lateral error weight in matrix Q
+    mpc_weight_heading_error: 0.5 # 20260201 HM mod from 1.0 # 20260124 HM mod from 0.0                # heading error weight in matrix Q
     mpc_weight_heading_error_squared_vel: 0.3    # heading error * velocity weight in matrix Q
-    mpc_weight_steering_input: 0.3 # 20260124 HM mod from 1.0               # steering error weight in matrix R
+    mpc_weight_steering_input: 1.0 # 20260201 HM mod from 0.3 # 20260124 HM mod from 1.0               # steering error weight in matrix R
     mpc_weight_steering_input_squared_vel: 0.25  # steering error * velocity weight in matrix R
     mpc_weight_lat_jerk: 0.1                     # lateral jerk weight in matrix R
     mpc_weight_steer_rate: 0.0                   # steering rate weight in matrix R
@@ -41,13 +41,13 @@
     mpc_zero_ff_steer_deg: 0.5                   # threshold that feed-forward angle becomes zero
     mpc_acceleration_limit: 2.0                  # limit on the vehicle's acceleration
     mpc_velocity_time_constant: 0.3              # time constant used for velocity smoothing
-    mpc_min_prediction_length: 10.0 # 20260125 HM mod from 5.0               # minimum prediction length
+    mpc_min_prediction_length: 5.0 # 20260201 HM mod from 10.0 # 20260125 HM mod from 5.0               # minimum prediction length
 
     # QP Solver Parameters    20250124 HM added
     mpc_qp_solver:
-      max_iteration: 100000 # max number of iterations for solver
-      eps_abs: 1e-6          # absolute convergence tolerance
-      eps_rel: 1e-6          # relative convergence tolerance
+      max_iteration: 50000 # 20260201 HM mod from 100000 # max number of iterations for solver
+      eps_abs: 1e-5 # 20260201 HM mod from 1e-6          # absolute convergence tolerance
+      eps_rel: 1e-6 # 20260201 HM mod from 1e-6          # relative convergence tolerance
 
     # -- vehicle model --
     vehicle_model_type: "kinematics" # vehicle model type for mpc prediction. option is kinematics, kinematics_no_delay, and dynamics
