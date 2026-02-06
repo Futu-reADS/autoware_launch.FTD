@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     # -- system --
-    traj_resample_dist: 0.2 # 20260201 HM mod from 0.05 # 20260125 HM mod from 0.1         # path resampling interval [m]
+    traj_resample_dist: 0.1 # 20260206 HM mod from 0.2 # 20260201 HM mod from 0.05 # 20260125 HM mod from 0.1         # path resampling interval [m]
     use_steer_prediction: false     # flag for using steer prediction (do not use steer measurement)
     admissible_position_error: 3.0 # 20260201 HM mod from 5.0  # stop mpc calculation when error is larger than the following value
     admissible_yaw_error_rad: 1.0 # 20260201 HM mod from 1.57  # stop mpc calculation when error is larger than the following value
@@ -20,7 +20,7 @@
     mpc_prediction_horizon: 30 # 20260201 HM mod from 100  # 2020124 HM mod from 50                   # prediction horizon step
     mpc_prediction_dt: 0.15 # 20260201 HM mod from 0.1                       # prediction horizon period [s]
     mpc_weight_lat_error: 5.0 # 20260201 HM mod from 20.0 # 20260124 HM mod from 1.0                    # lateral error weight in matrix Q
-    mpc_weight_heading_error: 0.5 # 20260201 HM mod from 1.0 # 20260124 HM mod from 0.0                # heading error weight in matrix Q
+    mpc_weight_heading_error: 1.0 # 20260124 HM mod from 0.0                # heading error weight in matrix Q
     mpc_weight_heading_error_squared_vel: 0.3    # heading error * velocity weight in matrix Q
     mpc_weight_steering_input: 1.0 # 20260201 HM mod from 0.3 # 20260124 HM mod from 1.0               # steering error weight in matrix R
     mpc_weight_steering_input_squared_vel: 0.25  # steering error * velocity weight in matrix R
