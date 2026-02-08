@@ -15,10 +15,10 @@
     boundary_types_to_detect: [curbstone]
 
     # Core
-    footprint_margin_scale: 1.0
-    resample_interval: 0.3
+    footprint_margin_scale: 0.8 # 20260208 HM mod from 1.0
+    resample_interval: 0.1 # 20260208 HM 0.3
     max_deceleration: 2.8
-    delay_time: 1.3
+    delay_time: 0.8 # 20260208 HM mod from 1.3
     max_lateral_deviation: 2.0
     max_longitudinal_deviation: 2.0
     max_yaw_deviation_deg: 60.0
