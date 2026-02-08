@@ -7,7 +7,7 @@
     admissible_yaw_error_rad: 1.0 # 20260201 HM mod from 1.57  # stop mpc calculation when error is larger than the following value
 
     # -- path smoothing --
-    enable_path_smoothing: true # 20260124 HM mod from false   # flag for path smoothing LJ false
+    enable_path_smoothing: false # 20260208 HM mod from true # 20260124 HM mod from false   # flag for path smoothing LJ false
     path_filter_moving_ave_num: 15 # 20260201 HM mod from 25 # 20260124 HM mod from 25 # param of moving average filter for path smoothing
     curvature_smoothing_num_traj: 10 # 20260201 HM mod from 15        # point-to-point index distance used in curvature calculation (for trajectory): curvature is calculated from three points p(i-num), p(i), p(i+num)
     curvature_smoothing_num_ref_steer: 10 # 20260201 HM mod from 15   # point-to-point index distance used in curvature calculation (for steer command reference): curvature is calculated from three points p(i-num), p(i), p(i+num)
