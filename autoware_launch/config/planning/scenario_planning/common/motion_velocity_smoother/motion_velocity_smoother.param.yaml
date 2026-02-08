@@ -34,7 +34,7 @@
       stopping_distance: 1.2    # distance for the stopping_velocity [m]. 0 means the stopping velocity is not applied.
 
       # path extraction parameters
-      extract_ahead_dist: 4.0 # 20260202 HM mod from    2.0 # HM mod from 2.0 # HM 20260201 from 30.0         # forward trajectory distance used for planning [m] #SJ default 200.00  #Set it to the distance planned by the behaviour_path_planner. No use smoothing out velocity for a path that is not planned.
+      extract_ahead_dist: 8.0 # 4.0 # 20260202 HM mod from    2.0 # HM mod from 2.0 # HM 20260201 from 30.0         # forward trajectory distance used for planning [m] #SJ default 200.00  #Set it to the distance planned by the behaviour_path_planner. No use smoothing out velocity for a path that is not planned.
       extract_behind_dist: 1.0 # HM 20260103 from 2.5          # backward trajectory distance used for planning [m] #SJ default 5.0 #IMPORTANT change - The higher the value, the larger the arc length of the smoothed out curve. 
                                         # Higher values mean any maneuvers will have a much smoother and shallower curve. Lower values mean the curve arc length is smaller and can have a smaller radius. 
       delta_yaw_threshold: 1.57 # 1.0472       # Allowed delta yaw between ego pose and trajectory pose [radian]
