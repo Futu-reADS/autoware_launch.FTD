@@ -21,8 +21,18 @@
   <arg name="planning" default="true" description="launch planning"/>
   <arg name="control" default="true" description="launch control"/>
   <!-- Map -->
-  <arg name="lanelet2_map_file" default="facility_lanelet2_map_cornerfix.osm" description="lanelet2 map file name"/>
-  <arg name="pointcloud_map_file" default="facility_divided" description="pointcloud map file name"/>
+  <arg name="lanelet2_map_file" default="facility_sim_testcourse_20260206.osm" description="lanelet2 map file name"/>
+  <!-- <arg name="lanelet2_map_file" default="1.5radius_facility_sim_20260204.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="facility_lanelet2_map_bollardtest.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="facility_lanelet2_map_cornerfix.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="1.5radius_facility_sim4_20260203.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="1.5radius_facility_sim5.osm" description="lanelet2 map file name"/> -->
+  <arg name="pointcloud_map_file" default="facility_pointcloud_map_subsampled_nobollard.pcd" description="pointcloud map file name"/>
+  <!-- <arg name="pointcloud_map_file" default="facility_divided" description="pointcloud map file name"/> -->
+
+  <!-- <arg name="lanelet2_map_file" default="Binhai2026BigLoops.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="pointcloud_map_file" default="Binhai_2026Main.pcd" description="pointcloud map file name"/> -->
+
   <!-- Perception -->
   <arg name="traffic_light_namespace" default="traffic_light" description="traffic light recognition namespace1"/>
   <!-- Control -->
