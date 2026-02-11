@@ -63,8 +63,8 @@
           th_moving_time: 1.0
           longitudinal_margin: 0.0
           lateral_margin:
-            soft_margin: 0.45 # 0.25                         # [m] default 0.7 YH
-            hard_margin: 0.25 # 0.2                          # [m] default -0.2 YH
+            soft_margin: 0.25                         # [m] default 0.7 YH
+            hard_margin: 0.2                          # [m] default -0.2 YH
             hard_margin_for_parked_vehicle: 0.2       # [m] default -0.2 YH
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.0 # 0.05    #default 0.1 YH
