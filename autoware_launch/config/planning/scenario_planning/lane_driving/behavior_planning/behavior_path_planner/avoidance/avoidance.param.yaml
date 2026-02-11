@@ -63,8 +63,8 @@
           th_moving_time: 1.0
           longitudinal_margin: 0.0
           lateral_margin:
-            soft_margin: 0.25                         # [m] default 0.7 YH
-            hard_margin: 0.2                          # [m] default -0.2 YH
+            soft_margin: 0.45 # 0.25                         # [m] default 0.7 YH
+            hard_margin: 0.25 # 0.2                          # [m] default -0.2 YH
             hard_margin_for_parked_vehicle: 0.2       # [m] default -0.2 YH
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.0 # 0.05    #default 0.1 YH
@@ -114,7 +114,7 @@
           motorcycle: true                              # [-]
           pedestrian: true                              # [-]
         # detection range
-        object_check_goal_distance: 3.0 # HM 20260103 mod from 5.0                # [m] |default 20.0 YH
+        object_check_goal_distance: 5.0 # 3.0 # HM 20260103 mod from 5.0                # [m] |default 20.0 YH
         object_check_return_pose_distance: 20.0         # [m]
         # lost object compensation
         max_compensation_time: 5.0  #default 2.0 YH
@@ -205,7 +205,7 @@
           hard_drivable_bound_margin: 0.0                # [m] |default 0.3 YH
           max_right_shift_length: 5.0                   # [m] FOR DEVELOPER
           max_left_shift_length: 5.0                    # [m] FOR DEVELOPER
-          max_deviation_from_lane: 0.5 # HM20260103 # 0.0                  # [m] |default 0.2 YH seems not to have an effect when there is only one lane
+          max_deviation_from_lane: 1.5 # 20260211 HM mod from 0.5 # HM20260103 # 0.0                  # [m] |default 0.2 YH seems not to have an effect when there is only one lane
           # approve the next shift line after reaching this percentage of the current shift line length.
           # this parameter is added to allow waiting for the return of shift approval until the occlusion behind the avoid target is clear.
           # this feature can be disabled by setting this parameter to 0.0.
@@ -259,7 +259,7 @@
         #                margin to avoid.
         # "reliable": module output avoidance path with safe (rtc cooperate) state only when the vehicle can avoid
         #             with expected lateral margin.
-        lateral_margin: "best_effort"                   # [-]
+        lateral_margin: "reliable" # 202602011 HM mod from "best_effort"                   # [-]
         # if true, module doesn't wait deceleration and outputs avoidance path by best effort margin.
         use_shorten_margin_immediately: true            # [-]
 
