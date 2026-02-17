@@ -34,10 +34,17 @@
   <arg name="check_external_emergency_heartbeat" default="false"/>
   <!-- Map -->
   
+
   <!-- <arg name="lanelet2_map_file" default="okinawa_outdoor_aligned_lanelet_map_full_cw.osm" description="lanelet2 map file name"/> -->
   <!-- <arg name="pointcloud_map_file" default="okinawa_outdoor_aligned_maps" description="pointcloud map file name"/> -->
 
-  <arg name="lanelet2_map_file" default="Binhai2026Main_Feb6_UTurnFix_6.osm" description="lanelet2 map file name"/>
+  <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb13_3.osm" description="lanelet2 map file name"/> -->
+  <arg name="lanelet2_map_file" default="Binhai2026Main_Feb13.osm" description="lanelet2 map file name"/>
+  <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb12.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb10_obstest.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb9_2.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb9.osm" description="lanelet2 map file name"/> -->
+  <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb6_UTurnFix_6.osm" description="lanelet2 map file name"/> -->
   <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb6_UTurnFix_5.osm" description="lanelet2 map file name"/> -->
   <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb6_UTurnFix_4.osm" description="lanelet2 map file name"/> -->
   <!-- <arg name="lanelet2_map_file" default="Binhai2026Main_Feb6_UTurnFix_3.osm" description="lanelet2 map file name"/> -->
